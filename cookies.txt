@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+testportal.zalaris.com	TRUE	/nea/v1/authenticate	FALSE	1999999999	com.sap.engine.security.authentication.original_application_url	GET#RCwbtpDOO7JvETpmgH9%2FCQhngEbIv2eHl9Jl0dUTvuiX0kQMoGv85IpXpLQg17vrlJjbr%2BR60TgMQ1hAkspPMyEQwC6nw2iI07Ojt%2BC67hss9UBnXEY4L%2BeoRuTNkm9CEMeF0Y6TPP3uQ8NiZ3lSU6FvNVY7aGEdeaOPS%2BgxSj5Nsz3yvKdX4oAr3wD045mgTli39pTMQt01EsxI0cgSciLhaxR62VZrLRjHWxG2Ulg%3D
+testportal.zalaris.com	TRUE	/	FALSE	1999999999	saplb_PORTAL	(J2EE7254220)7254253
+testportal.zalaris.com	TRUE	/	FALSE	1999999999	SameSite	None
+
