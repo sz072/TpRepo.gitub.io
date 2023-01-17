@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from testportal.zalaris.com/resetpwd/resetpwd.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2023 12:53:28 GMT -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="Pragma-directive: no-cache">
+  <meta http-equiv="Cache-directive: no-cache">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://testportal.zalaris.com/resetpwd/srcfiles/jquery-3.3.1.min.js"></script>
+  <script src="https://testportal.zalaris.com/resetpwd/srcfiles/jquery-migrate-3.0.1.min.js"></script>
+  <script src="https://testportal.zalaris.com/resetpwd/srcfiles/script_201903.js"></script>
+  <script src="https://testportal.zalaris.com/resetpwd/srcfiles/resetPwd.js"></script>
+  <!--[if IE]>
+  <script src="/zalaris_logon_2fa/css/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="https://testportal.zalaris.com/resetpwd/srcfiles/resetpass.css" type="text/css">
+
+  <!-- Favicons -->
+ <link rel="apple-touch-icon" sizes="180x180" href="https://testportal.zalaris.com/resetpwd/srcfiles/img/favicons/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://testportal.zalaris.com/resetpwd/srcfiles/img/favicons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://testportal.zalaris.com/resetpwd/srcfiles/img/favicons/favicon-16x16.png">
+ <link rel="mask-icon" href="https://testportal.zalaris.com/resetpwd/srcfiles/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!--<base target="_self">-->
+  <base  target="_self">
+  <title>Password Reset</title>
+</head>
+
+<body class="urBdyStd" onload="resetPwdHelper.setFocusToFirstField(document.passResetForm);">
+
+  <header id="Banner" role="banner">
+  </header>
+
+  <div id="Wrap" style="display: block;">
+    <!-- placeholder for system messages -->
+    <div id="SysMsg" style="display: none;"></div>
+
+    <div id="Main" role="main">
+      <!-- placeholder for validation/authentication errors -->
+      <div id="ZalLogoContainer">
+        <div id="ZalLogo"></div>
+      </div>
+      <div id="ScreenTitle">Reset Password</div>
+      <div id="MessageArea">
+        <!-- <div class="message">
+        <span class="message-image"><img height="12" width="14" src="/zalaris_logon_2fa/css/common/1x1.gif"></span><span class="message-text" tabindex="0">User authentication failed</span>
+      </div> -->
+      </div>
+
+      <form autocomplete="off" id="passResetForm" name="passResetForm" target="logonAppPage">
+        <!-- User Id input -->
+        <label class="urLblStdNew">
+          <nobr>Zalaris ID<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="text" id="logonuidfield" name="j_username" title="User *" class="urEdfTxtEnbl">
+        <!-- Email input -->
+        <label class="urLblStdNew" for="mailfield">
+          <nobr>E-mail<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="email" id="mailfield" name="j_email" class="urEdfTxtEnbl">
+        <!-- Token input -->
+        <label class="urLblStdNew" for="tokenfield" style="display: none;">
+          <nobr>Security Token<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="text" id="tokenfield" name="j_token" class="urEdfTxtEnbl" style="display: none;" autocomplete="one-time-code">
+        <!-- Passcode input -->
+        <label class="urLblStdNew" for="passcodefield" style="display: none;">
+          <nobr>Passcode<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="text" id="passcodefield" name="j_passcode" class="urEdfTxtEnbl" style="display: none;" autocomplete="one-time-code">
+        <!-- Submit button -->
+        <input type="submit" name="passResetBtn" onclick="resetPwdHelper.onSubmitBtnClick(event);" value="Submit" class="urBtnStdNew">
+        <input type="submit" name="passCancelBtn" onclick="resetPwdHelper.onCancelBtnClick(event);" value="Cancel" class="urBtnStdNew">
+      </form>
+
+      <form autocomplete="off" id="changePasswordForm" name="changePasswordForm" target="logonAppPage" method="post"
+        action="#" style="display: none;">
+        <!-- Old Password input -->
+        <!--<label class="urLblStdNew" for="logonoldpassfield" style="display: none;">
+          <nobr>Old Password<span class="urLblReq">&nbsp;*</span></nobr>
+        </label> -->
+        <input type="hidden" id="logonoldpassfield" name="j_sap_current_password" class="urEdfTxtEnbl">
+        <!-- New Password input -->
+        <label class="urLblStdNew" for="logonnewpassfield">
+          <nobr>New Password<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="password" id="logonnewpassfield" name="j_sap_password" class="urEdfTxtEnbl" autocomplete="new-password"><br>
+        <!-- Confirm Password input -->
+        <label class="urLblStdNew" for="logonretypepassfield">
+          <nobr>Confirm Password<span class="urLblReq">&nbsp;*</span></nobr>
+        </label>
+        <input type="password" id="logonretypepassfield" name="j_sap_again" class="urEdfTxtEnbl" autocomplete="new-password"><br>
+        <!-- Submit button -->
+        <input class="urBtnStdNew" type="submit" name="performChangePassword" value="Change"
+          onclick="resetPwdHelper.onPwdChangeBtnClick(event);">
+        <input class="urBtnStdNew" type="submit" name="showUidPasswordLogonPage" value="Cancel"
+          onclick="resetPwdHelper.onCancelBtnClick(event);">
+      </form>
+    </div>
+
+    <div id="Complementary" role="complementary"></div>
+
+</body>
+
+
+<!-- Mirrored from testportal.zalaris.com/resetpwd/resetpwd.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2023 12:53:28 GMT -->
+</html>
