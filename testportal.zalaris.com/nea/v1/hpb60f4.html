@@ -1,0 +1,267 @@
+<!DOCTYPE html><script>
+  var inPortalScript = false
+  var webpath = "../../zalaris_logon_2fa/index.html"
+</script>
+
+<html>
+
+<!-- Mirrored from testportal.zalaris.com/nea/v1/authenticate?neaRelayState=ZHQPORTAL%3ahttps%3a%2f%2ftestportal.zalaris.com%2fep%2fredirect by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2023 12:53:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<BASE target="_self">
+<link rel=stylesheet href="../../zalaris_logon_2fa/css/misc_logon.css">
+<title>Zalaris Test Portal</title>
+<script language="javascript">
+var originWindowName=window.name;
+window.name="logonAppPage";
+function restoreWindow() {
+try{
+window.name=originWindowName;
+} catch(ex){}
+}
+</script>
+<script language="JavaScript">
+function putFocus(formInst, elementInst) {
+  if (document.forms.length > 0) {
+    document.forms[formInst].elements[elementInst].focus();
+  }
+}
+
+function setValuesAutoCreation() {
+var form = document.getElementById('certLogonForm');
+form.j_username.value="";
+form.j_password.value="";
+form.automaticAccountCreation.value="true";
+}
+function submitForm() {
+var form = document.getElementById('certLogonForm');
+form.submit();
+}
+function setFocusToFirstField() {
+ myform = document.certLogonForm;
+ try{
+   for (i=0; i<myform.length; i++) {
+    elem = myform.elements[i];
+    if (!elem.disabled) {
+      elemType = elem.type;
+      if (elemType=="text" || elemType=="password") {
+       if (!elem.readOnly && elem.value=="") {
+          elem.focus();
+          break;
+       }
+      }
+      if (elemType=="select-one" || elemType=="select-multiple" || elemType=="checkbox" || elemType=="radio") {
+        elem.focus();
+        break;
+      }
+    }
+   }
+ } catch(ex){
+ }
+}
+function onClickCertCancel() {
+  document.certLogonForm.j_password.value="";
+  document.certLogonForm.cancelIdPLogon.value="Cancel";
+}
+</script>
+<body class="urBdyStd" bgcolor="#F7F9FB" onLoad="setFocusToFirstField()" onUnload="restoreWindow()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+var blockPage = false;
+</script>
+
+
+
+<script language="JavaScript">
+function writeMessage() {
+	document.write("<h2>A possible Cross-Frame Scripting attack has been prevented. Please contact your system administrator or refer to SAP Note 1651004 for more information.</h2>");
+}
+
+if (blockPage) {
+	var browserName = navigator.appName;
+	// According to the tests IE works with document.execCommand(), but Firefox and Chrome do not
+	if (browserName.indexOf("Explorer") > -1) {
+		writeMessage();
+		document.execCommand("Stop");
+	} else {
+		writeMessage();
+		window.stop();
+	}
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="../../../code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../../../code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+<script src="../../zalaris_logon_2fa/css/script_201907.js"></script>
+<!--[if IE]>
+<script src="/zalaris_logon_2fa/css/html5.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="../../zalaris_logon_2fa/css/login_201907.css" type="text/css" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="../../zalaris_logon_2fa/css/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../zalaris_logon_2fa/css/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../zalaris_logon_2fa/css/img/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="../../zalaris_logon_2fa/css/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+<header id="Banner" role="banner">
+    <h1><a href="../../index.html">Zalaris</a></h1>
+</header>
+
+<div id="Wrap">
+    <!-- placeholder for system messages -->
+    <div id="SysMsg"></div>
+
+    <div id="Main" role="main">
+        <!-- placeholder for validation/authentication errors -->
+        <div id="MessageArea">
+            
+            
+            
+        </div>
+
+        <FORM  AUTOCOMPLETE="off"  id="certLogonForm" name="certLogonForm" target="logonAppPage" method="post" action="#" >
+<input type="hidden" name="j_salt" value="Qd1tn+oMeHuJCgvI3NvxaSYJjtg=" />
+
+            
+
+            
+            
+
+            
+
+            
+                <label class="urLblStdNew">
+                	<nobr>
+                		Zalaris ID
+                		<span class="urLblReq">&nbsp;*</span>
+               		</nobr>
+              	</label>
+
+                
+                <input type="text" id="logonuidfield"  name="j_username" value="" title="User *" class="urEdfTxtEnbl">
+                
+
+                
+                
+                <label class="urLblStdNew" for="logonpassfield"><nobr>Password<span class=urLblReq>&nbsp;*</span></nobr></label>
+
+                
+                <input type="password" id="logonpassfield"  name="j_password" class="urEdfTxtEnbl">
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <input type="submit" name="uidPasswordLogon" onClick="onSubmitButtonClick();" value="Log On" class="urBtnStdNew">
+            
+            
+            
+            
+            
+                <a href="https://testportal.zalaris.com:50001/nea/v1/authenticate?neaRelayState=ZHQPORTAL%3ahttps%3a%2f%2ftestportal.zalaris.com%2fep%2fredirect" target="logonAppPage" class="urLnk"><span class="urTxtStd">Certificate Logon</span></a>
+            
+            
+            
+            
+
+            
+        <input type="hidden" name="save_cert" value="1" />
+</form>
+
+
+        
+            <!--<span class="urLblStdBar">Logon Problems?</span><a href="/resetpwd/resetpwd.html" target="_blank" class="urLnk"><span class="urTxtStd">Get Support</span></a>-->
+            <a href="../../resetpwd/resetpwd.html" target="_blank" class="urLnk"><span class="urTxtStd">Request new password</span></a>
+        
+
+    </div>
+
+	<div id="Complementary" role="complementary"></div>
+    
+
+</div>
+
+<script type="text/javascript">
+    function onClickCancel() {
+        onSubmitButtonClick();
+    }
+
+    function onSubmitButtonClick() {
+        var form = document.getElementById("certLogonForm");
+        var currentFormAction = form.action;
+        var jIndex = currentFormAction.indexOf("j_passcode");
+        // chaning the form action only if there is j_passcode param
+        if (jIndex > -1) {
+            form.action = removeOTPParameterFromAction(currentFormAction, jIndex);
+        }
+    }
+
+    function removeOTPParameterFromAction(currentFormAction, jIndex) {
+        var jPasscode;
+        var newFormAction = currentFormAction;
+
+        var umpIndex = currentFormAction.indexOf("&", jIndex);
+        //extract passcode with & or ? if it is the last or the only one parameter
+        if (umpIndex > -1) {
+            jPasscode = currentFormAction.slice(jIndex, umpIndex+1); //extract passcode and &
+        } else {
+            jPasscode = currentFormAction.slice(jIndex-1); //extract ? and passcode
+        }
+        newFormAction = currentFormAction.replace(jPasscode, "");
+
+        return newFormAction;
+    }
+</script>
+
+<script type="text/javascript">
+    <!--
+    var isFormSubmitted = false;
+    if( document.forms ) {
+        document.forms[0].onsubmit=function(){
+            if( isFormSubmitted ) {
+                return false;
+            } else {
+                isFormSubmitted = true;
+                return true;
+            }
+        }
+    }
+    -->
+</script></body>
+
+<!-- Mirrored from testportal.zalaris.com/nea/v1/authenticate?neaRelayState=ZHQPORTAL%3ahttps%3a%2f%2ftestportal.zalaris.com%2fep%2fredirect by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jan 2023 12:53:28 GMT -->
+</html>
