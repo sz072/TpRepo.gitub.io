@@ -1,0 +1,373 @@
+/* Project Meta
+--------------------------------------------------------------
+Project: [Zalaris HR Portal - Logon]
+Author: Rayon Visual Concepts
+Media: All except 'Print'
+-------------------------------------------------------------- */
+
+/* =INCLUDES
+-------------------------------------------------------------- */
+@import url("lib/normalize.css"); /* reset, normalize, restart */
+
+/* =COMMON
+-------------------------------------------------------------- */
+@font-face {
+  font-family:"Roboto-Regular";
+  src:url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400;
+}
+
+html {
+	height: 100%;
+	line-height: 1.5;
+	font-family: "Roboto-Regular", Arial, sans-serif;
+}
+
+body {
+	color: #454545;
+  margin: 0;
+	min-width: 60em;
+  height: 70%;
+	background: #f9f9fd!important;
+}
+
+body.ie {
+	text-align: center;
+}
+
+a {
+	color: #0C69A9;
+	outline: none !important;
+    text-decoration: none;
+}
+
+.urLblStdBar {
+  padding-right: 10px;
+  color: #89919a;
+  font-size: 0.875rem
+}
+
+.urTxtStd {
+  font-size: 0.875rem
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	font-family: "Roboto-Regular", Arial, sans-serif;
+}
+
+input[type="text"],
+input[type="password"],
+input.hax-input {
+  border-color: #B9B9B9 #EEEEEE #EEEEEE #B9B9B9;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.8125em;
+  margin: 0px 0 1.7692em 0;
+  padding: 0.1307em 0.3076em;
+  width: 97%;
+  height: 1.8em;
+  border: 1px solid #e1e1e1;
+
+}
+input[type="submit"],
+input.hax-submit {
+  background-color: #3079BF;
+  border: 0 none;
+  color: #FFFFFF;
+  font-size: 0.875em;
+  font-weight: bold;
+  padding: 0.575em 3.0em;
+  border-radius: 3px;
+  zoom: 1;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+form {
+  position: relative;
+  margin: 15px auto 30px auto;
+  text-align: right;
+  width: 18rem;
+  text-align: left;
+}
+/*Logo CSS as before element of the form*/
+form::before {
+  position: absolute;
+  content: "";
+  top: -9rem;
+  width: 200px;
+  height: 70px;
+  background: url(img/zalaris_logo_2022.png) no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+form::after {
+  left: 0px;
+  position: absolute;
+  content: "";
+  bottom: -21px;
+  width: 288px;
+  height: 1px;
+  background: #8080804a;
+}
+
+label {
+	vertical-align:top;
+}
+
+h3 {
+	margin: 0 0 0.8em;
+}
+
+/* =LAYOUT (MASTER)
+-------------------------------------------------------------- */
+
+/* Banner
+-------------------------------- */
+#Banner {
+	display:none;
+}
+
+/* Wrap
+-------------------------------- */
+#Wrap {
+  margin: 7% auto;
+  overflow: auto;
+  max-width: 75em;
+  min-width: 60em;
+  min-height: 35em;
+  max-height: 41em;
+  height: 100%;
+  text-align: left;
+  box-shadow: 0px 0px 10px 0px rgba(106, 109, 112, 0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(106, 109, 112, 0.15);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(106, 109, 112, 0.15);
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+/* SysMsg
+-------------------------------- */
+#SysMsg {
+	margin: 0 0 0 7.25em;
+}
+
+#SysMsg p {
+	margin: 0;
+}
+
+/* Main
+-------------------------------- */
+#Main {
+  text-align: center;
+  padding: 0;
+  width: 40%;
+  padding-top: 13rem;
+  float: left;
+}
+
+#Main footer {
+	clear: both;
+  float: right;
+  margin: 0;
+}
+
+#Main footer a {
+	border-left: 1px solid #565656;
+    display: block;
+    float: left;
+    font-size: 0.75em;
+    margin: 0 0 0 0.5833em;
+    padding: 0 0 0 0.5833em;
+}
+
+#Main footer a:first-child {
+	border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#MessageArea {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.9em;
+  width: 17.856rem;
+}
+
+.message {
+  background-color: #f8d7da;
+  border: 1px solid transparent;
+  border-color: #f5c6cb;
+  border-radius: .25rem;
+  padding: 0.225rem 0.5rem;
+}
+
+#MessageArea p {
+	margin: 0;
+}
+
+#MessageArea .message-image img {
+	visibility:hidden;
+}
+
+
+/* Complementary
+-------------------------------- */
+#Complementary {
+  background-color: #FFFFFF;
+  background: url(img/complementary.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: grayscale(35%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(35%);
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+
+/* =COMPONENTS
+-------------------------------------------------------------- */
+#SysMsg,
+#MessageArea,
+.urLblReq {
+	color: #F36F23;
+}
+.urTxtMsg {
+	color: #606060;
+}
+
+.message-image {
+  padding: 0.325rem 0 0.325rem 0.55rem;
+}
+
+.message-text {
+  position: relative;
+  padding: 0.325rem 0.55rem;
+  margin-bottom: 0rem;
+  color: #721c24;
+}
+
+.message-text:focus, .message-image:focus {
+  outline: none;
+}
+
+/* =MEDIA QUERIES
+-------------------------------------------------------------- */
+@media only screen and (max-device-width: 85.375em) {
+	html, body {
+		height: 100%;
+	}
+
+  #Wrap {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-height: unset;
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width:60em) {
+	body {
+		width: auto;
+		min-width: 18.75em;
+    background: #fff!important;
+	}
+
+	#Wrap {
+    width: auto;
+    min-width: auto;
+    height: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+	}
+
+	#SysMsg {
+		margin: 0 2em;
+	}
+
+	#Main {
+		float:none;
+		width: auto;
+		margin: 0 2em;
+		padding-bottom: 2em;
+    padding-top: 10rem;
+	}
+
+	#Complementary {
+		display: none;
+	}
+
+  form::before {
+    right: 3rem;
+  }
+}
+
+@media screen and (max-width:22em) {
+
+	#Main form input[type=text],
+	#Main form input[type=password] {
+		width:100%
+	}
+}
+
+/* body.ie.lt60em,
+body.ie.lt31em,
+body.ie.lt22em  {
+	width: auto;
+	min-width: 18.75em;
+}
+
+.ie.lt60em #Banner h1 {
+	width: auto;
+}
+
+.ie.lt60em #Wrap,
+.ie.lt31em #Wrap,
+.ie.lt22em #Wrap {
+	width: auto;
+}
+
+.ie.lt60em #SysMsg,
+.ie.lt31em #SysMsg,
+.ie.lt22em #SysMsg {
+
+	width: auto;
+	margin: 0 2em;
+}
+
+.ie.lt60em #Main,
+.ie.lt31em #Main,
+.ie.lt22em #Main {
+	float: none;
+	width: auto;
+	margin: 0 2em;
+	padding-bottom: 2em;
+}
+
+.ie.lt60em #Complementary,
+.ie.lt31em #Complementary,
+.ie.lt22em #Complementary {
+	float:none;
+	width:auto;
+	margin: 2em;
+	min-width: 11em;
+}
+
+.ie.lt31em #Banner h1,
+.ie.lt22em #Banner h1 {
+	width: auto;
+	background-position: 50% bottom !important;
+} */
